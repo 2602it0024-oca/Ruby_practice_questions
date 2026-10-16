@@ -1,0 +1,17 @@
+.message-success {
+  color: green;
+}
+
+.message-delete {
+  color: red;
+}
+
+.article-table {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.article-table th,
+.article-table td {
+  border: 1px solid gray;
+}
