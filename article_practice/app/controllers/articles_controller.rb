@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
   @article = Article.new(article_params)
 
   if @article.save
-    redirect_to articles_path, notice: "投稿しました。"
+    redirect_to articles_path, notice: "新規投稿しました。"
   else
     render :new, status: :unprocessable_entity
   end
@@ -29,7 +29,7 @@ def update
   @article = Article.find(params[:id])
 
   if @article.update(article_params)
-    redirect_to articles_path, notice: "更新しました。"
+    redirect_to articles_path, notice: "投稿を更新しました。"
   else
     render :edit, status: :unprocessable_entity
   end
@@ -40,7 +40,7 @@ def destroy
   @article.destroy
 
   redirect_to articles_path,
-              alert: "削除しました。",
+              alert: "投稿を削除しました。",
               status: :see_other
 end
 
